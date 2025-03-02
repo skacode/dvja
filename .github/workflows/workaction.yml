@@ -1,0 +1,23 @@
+name: CI/CD - DVJA 
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+  actions: read
+  pull-requests: write
+
+jobs:
+  DVJA:
+    uses: skacode/org/.github/workflows/cicd-template.yml@main
+    with:
+      project_name: "dvja"
+      docker_image: "skacode/dvja"
+      working_directory: "."
+      app_url: "http://localhost:8080"
+      file_to_patch: "src/main/java/com/appsecco/dvja/services"
+      file_content_replacement: "org/.github/corrections/UserServiceCorrections.java"
+    secrets: inherit

@@ -19,5 +19,5 @@ jobs:
       working_directory: "."
       app_url: "http://localhost:8080"
       file_to_patch: "src/main/java/com/appsecco/dvja/controllers/UserAction.java"
-      file_content_replacement: "org/.github/corrections/UserServiceCorrections.java"
+      file_content_replacement: "org/.github/corrections/UserActionCorrections.java"
     secrets: inherit

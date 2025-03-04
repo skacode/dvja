@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dvja
+  namespace: training
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dvja
+  template:
+    metadata:
+      labels:
+        app: dvja
+    spec:
+      containers:
+        - name: dvja
+          image: ${IMAGE_NAME}
+          env:
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: dvja-config
+                  key: DB_HOST
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: dvja-secret
+                  key: MYSQL_USER
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: dvja-secret
+                  key: MYSQL_PASSWORD
+          ports:
+            - containerPort: 80

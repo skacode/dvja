@@ -33,7 +33,7 @@ spec:
                   name: dvja-secret
                   key: MYSQL_PASSWORD
             - name: MYSQL_DATABASE
-              value: dvwa
+              value: dvja
           ports:
             - containerPort: 3306
           volumeMounts:

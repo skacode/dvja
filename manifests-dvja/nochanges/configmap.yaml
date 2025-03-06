@@ -4,4 +4,4 @@ metadata:
   name: dvja-config
   namespace: training
 data:
-  DB_HOST: "mysql.training.svc.cluster.local?useSSL=false&allowPublicKeyRetrieval=true"
+  DB_HOST: "mysql.training.svc.cluster.local"

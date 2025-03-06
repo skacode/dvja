@@ -16,6 +16,7 @@ spec:
       containers:
         - name: mysql
           image: mysql:5.7
+          command: ["mysqld", "--ssl=0", "--skip-ssl", "--require-secure-transport=OFF"]
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:

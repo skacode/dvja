@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: dvja
-          image: skacode/dvja:latest
+          image: ${IMAGE_NAME}
           env:
             - name: DB_HOST
               valueFrom:

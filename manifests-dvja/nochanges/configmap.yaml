@@ -7,4 +7,5 @@ data:
   DB_HOST: "mysql.training.svc.cluster.local"
   DB_PORT: "3306"
   DB_NAME: "dvja"
-  DB_OPTIONS: "?useSSL=false&allowPublicKeyRetrieval=true"
+  DB_OPTIONS: ""
+

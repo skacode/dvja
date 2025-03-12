@@ -1,4 +1,4 @@
-name: CI/CD - DVJA
+name: CI/CD - DVJA 
 
 on:
   push:
